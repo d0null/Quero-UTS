@@ -43,13 +43,11 @@ class MentorController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Mentor  $mentor
+     * @param  Mentor  $mentor
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Mentor $mentor)
     {
-        $mentor = Mentor::findOrFail($id);
-
         return view('singlementor', compact('mentor'));
     }
 

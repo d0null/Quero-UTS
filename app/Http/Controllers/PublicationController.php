@@ -15,8 +15,8 @@ class PublicationController extends Controller
     public function index()
     {
         $publications = Publication::all();
-        return view('publications', compact('publications'));
 
+        return view('publications', compact('publications'));
     }
 
     /**
@@ -46,10 +46,8 @@ class PublicationController extends Controller
      * @param  \App\Publication  $publication
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Publication $publication)
     {
-        $publication = Publication::findOrFail($id);
-
         return view('singlepublication', compact('publication'));
     }
 

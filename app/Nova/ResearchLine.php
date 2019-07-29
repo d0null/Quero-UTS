@@ -3,6 +3,7 @@
 namespace App\Nova;
 
 use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
@@ -53,6 +54,7 @@ class ResearchLine extends Resource
         return [
             ID::make()->sortable(),
             BelongsTo::make('Padre', 'parent', 'App\Nova\ResearchLine')->nullable(),
+            HasMany::make('child pedo', 'children', 'App\Nova\ResearchLine'),
             BelongsTo::make('Escuela', 'school', 'App\Nova\School'),
             Text::make('Titulo', 'title'),
         ];
