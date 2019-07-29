@@ -28,6 +28,10 @@ Route::get('/tutores', 'MentorController@index')->name('mentors.index');
 
 Route::get('/tutor/{id}', 'MentorController@show')->name('mentors.show');
 
+Route::get('/etiquetas/{tag}', function($tag){
+    return \App\Publication::withAllTags([$tag])->get();
+})->name('tag');
+
 Route::get('test/{researchLine}', function(\App\ResearchLine $researchLine){
     $mentor = \App\Mentor::first();
     $publicationsOfMentor = $mentor->publications();
