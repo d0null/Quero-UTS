@@ -19,7 +19,8 @@
                     <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#travel</span>
                     <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#winter</span>
                 </div>
-            </div>                            
+            </div>
+            <code><pre>{{ json_encode($publication->tags, JSON_PRETTY_PRINT) }}</pre></code>
         @endforeach
     </div>
 </div>
