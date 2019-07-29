@@ -14,8 +14,8 @@ class Publication extends Model
         return $this->belongsTo(Mentor::class);
     }
 
-    public function researchLine()
+    public function researchLines()
     {
-        return $this->belongsTo(ResearchLine::class);
+        return $this->belongsToMany(ResearchLine::class);
     }
 }

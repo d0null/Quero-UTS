@@ -10,4 +10,9 @@ class Mentor extends Model
     {
         return $this->name.' '.$this->last_name;
     }
+
+    public function publications()
+    {
+        return $this->hasMany(Publication::class);
+    }
 }

@@ -2,7 +2,9 @@
 
 namespace App\Nova;
 
+use Benjacho\BelongsToManyField\BelongsToManyField;
 use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\BelongsToMany;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Select;
@@ -59,7 +61,10 @@ class Publication extends Resource
             ID::make()->sortable(),
             BelongsTo::make('Tutor', 'mentor', 'App\Nova\Mentor')->help(
                 'Selecciona el Tutor de la lista de tutores, de no encontrarse debes agregarlo'),
-            BelongsTo::make('Linea de Investigacion', 'researchLine', 'App\Nova\ResearchLine'),
+            BelongsToManyField::make('Linea de Investigacion', 'researchLine', 'App\Nova\ResearchLine')
+                ->options(\App\ResearchLine::get())
+                ->optionsLabel('title')
+                ->rules('required', 'size:4'),
             Text::make('Titulo', 'title'),
             Text::make('Autor', 'author'),
             Text::make('Url', 'url'),
@@ -84,12 +89,12 @@ class Publication extends Resource
                 2017 => 2017,
                 2018 => 2018,
                 2019 => 2019,
-                ]),
+            ]),
             Select::make('Mención', 'mention')->options([
                 'publication' => 'Publicacíon',
                 'honorific' => 'Honorifica',
             ]),
-            Tags::make('Tags')
+            Tags::make('Tags'),
         ];
     }
 

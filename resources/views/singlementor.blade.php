@@ -68,6 +68,8 @@
                 <p class="text-90">{{ $mentor->cedula }}</p>
             </div>
         </div>
+
+        <code><pre>{{ json_encode($mentor->publications, JSON_PRETTY_PRINT) }}</pre></code>
     </div>
 </div>
 @endsection

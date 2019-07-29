@@ -20,6 +20,13 @@ class CreateResearchLinesTable extends Migration
             $table->string('title');
             $table->timestamps();
         });
+
+        Schema::create('publication_reasearch_line', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('research_line_id');
+            $table->unsignedBigInteger('publication_id');
+            $table->timestamps();
+        });
     }
 
     /**

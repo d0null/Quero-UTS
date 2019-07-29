@@ -15,8 +15,9 @@
                 <div class="px-6 mb-4">
                     <p>{{ $mentor->email }}</p>
                     <p>{{ $mentor->phone }}</p>
+                    <p>{{ $mentor->publications()->count() }}</p>
                 </div>
-            </div>                            
+            </div>
         @endforeach
     </div>
 </div>
