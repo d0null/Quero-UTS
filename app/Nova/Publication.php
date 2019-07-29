@@ -61,10 +61,11 @@ class Publication extends Resource
             ID::make()->sortable(),
             BelongsTo::make('Tutor', 'mentor', 'App\Nova\Mentor')->help(
                 'Selecciona el Tutor de la lista de tutores, de no encontrarse debes agregarlo'),
-            BelongsToManyField::make('Linea de Investigacion', 'researchLine', 'App\Nova\ResearchLine')
+            BelongsToManyField::make('Linea de Investigacion', 'researchLines', 'App\Nova\ResearchLine')
                 ->options(\App\ResearchLine::get())
                 ->optionsLabel('title')
                 ->rules('required', 'size:4'),
+            BelongsToMany::make('Linea de Investigacion', 'researchLines', 'App\Nova\ResearchLine'),
             Text::make('Titulo', 'title'),
             Text::make('Autor', 'author'),
             Text::make('Url', 'url'),

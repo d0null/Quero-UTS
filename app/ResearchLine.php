@@ -25,4 +25,9 @@ class ResearchLine extends Model
     {
         return $this->belongsTo(School::class);
     }
+
+    public function publications()
+    {
+        return $this->belongsToMany(Publication::class);
+    }
 }

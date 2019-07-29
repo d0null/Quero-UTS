@@ -16,7 +16,6 @@ class CreatePublicationsTable extends Migration
         Schema::create('publications', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('mentor_id');
-            $table->unsignedBigInteger('research_line_id');
             $table->string('title');
             $table->string('author');
 

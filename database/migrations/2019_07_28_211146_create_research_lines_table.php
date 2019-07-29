@@ -21,7 +21,7 @@ class CreateResearchLinesTable extends Migration
             $table->timestamps();
         });
 
-        Schema::create('publication_reasearch_line', function (Blueprint $table) {
+        Schema::create('publication_research_line', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('research_line_id');
             $table->unsignedBigInteger('publication_id');
@@ -37,5 +37,6 @@ class CreateResearchLinesTable extends Migration
     public function down()
     {
         Schema::dropIfExists('research_lines');
+        Schema::dropIfExists('publication_research_line');
     }
 }
