@@ -16,7 +16,8 @@ class ResearchLine extends Model
         return $this->hasMany(ResearchLine::class, 'parent_id');
     }
 
-    public function descendants(){
+    public function descendants()
+    {
         return $this->hasMany(ResearchLine::class, 'parent_id')->with('descendants');
     }
 

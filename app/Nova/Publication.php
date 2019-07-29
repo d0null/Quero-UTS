@@ -9,6 +9,7 @@ use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Spatie\TagsField\Tags;
 
 class Publication extends Resource
 {
@@ -40,7 +41,7 @@ class Publication extends Resource
         return 'Publicaciones';
     }
 
-    
+
     public static function singularLabel()
     {
         return 'Publicacion';
@@ -65,29 +66,30 @@ class Publication extends Resource
             Textarea::make('Resumen', 'resume'),
             Select::make('Año de publicacíon', 'publish_year')->options([
                 2001 => 2001,
-                2002 => 2002, 
+                2002 => 2002,
                 2003 => 2003,
-                2004 => 2004, 
+                2004 => 2004,
                 2005 => 2005,
-                2006 => 2006, 
+                2006 => 2006,
                 2007 => 2007,
-                2008 => 2008, 
+                2008 => 2008,
                 2009 => 2009,
-                2010 => 2010, 
+                2010 => 2010,
                 2011 => 2011,
-                2012 => 2012, 
+                2012 => 2012,
                 2013 => 2013,
-                2014 => 2014, 
+                2014 => 2014,
                 2015 => 2015,
-                2016 => 2016,                                                           
-                2017 => 2017, 
+                2016 => 2016,
+                2017 => 2017,
                 2018 => 2018,
-                2019 => 2019, 
+                2019 => 2019,
                 ]),
             Select::make('Mención', 'mention')->options([
                 'publication' => 'Publicacíon',
                 'honorific' => 'Honorifica',
             ]),
+            Tags::make('Tags')
         ];
     }
 
