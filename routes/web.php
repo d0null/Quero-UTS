@@ -21,5 +21,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/publicaciones', 'PublicationController@index')->name('publications.index');
 
-Route::get('/publicaciones/{id}', 'PublicationController@show')->name('publications.show');
+Route::get('/publicacion/{id}', 'PublicationController@show')->name('publications.show');
 
+
+Route::get('/tutores', 'MentorController@index')->name('mentors.index');
+
+Route::get('/tutor/{id}', 'MentorController@show')->name('mentors.show');

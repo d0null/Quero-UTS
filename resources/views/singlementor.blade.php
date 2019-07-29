@@ -2,16 +2,12 @@
 
 @section('content')
 
-
-
-
-
-<div class="container mx-auto">
+<div class="container mx-auto max-w-md ">
 
     <div class="flex items-center mb-3">
         <div class="ml-3 w-full flex items-center">
             <div class="flex w-full justify-left items-center">
-                <h1 class="flex-no-shrink text-90 font-normal text-2xl">Detalles de la publicación</h1>
+                <h1 class="flex-no-shrink text-90 font-normal text-2xl">Detalles del Tutor</h1>
             </div>
             <div class="ml-3">
                 <!---->
@@ -36,70 +32,40 @@
             <div class="w-1/4 py-4">
                 <h4 class="font-normal text-80">ID</h4></div>
             <div class="w-3/4 py-4">
-                <p class="text-90">{{ $publication->id }}</p>
+                <p class="text-90">{{ $mentor->id }}</p>
             </div>
         </div>
         <div class="flex border-b border-40">
             <div class="w-1/4 py-4">
-                <h4 class="font-normal text-80">Tutor</h4></div>
+                <h4 class="font-normal text-80">Nombres</h4></div>
             <div class="w-3/4 py-4">
-                <a href="/tutor/{{ $publication->mentor->id }}" class="no-underline font-bold dim text-primary">
-                    {{ $publication->mentor->name ." ". $publication->mentor->last_name }}
-                </a>
+
+                 <p class="text-90">   {{ $mentor->name ." ". $mentor->last_name }}</p>
+
             </div>
         </div>
 
+
         <div class="flex border-b border-40">
             <div class="w-1/4 py-4">
-                <h4 class="font-normal text-80">Linea de Investigacion</h4></div>
-            <div class="w-3/4 py-4"><a href="/admin/resources/research-lines/1" class="no-underline font-bold dim text-primary">
-                THIS SHIT DOESNT WORK HERE
-            </a></div>
-        </div>
-        <div class="flex border-b border-40">
-            <div class="w-1/4 py-4">
-                <h4 class="font-normal text-80">Titulo</h4></div>
+                <h4 class="font-normal text-80">Email</h4></div>
             <div class="w-3/4 py-4">
-                <p class="text-90">{{ $publication->title }}</p>
+                <p class="text-90">{{ $mentor->email }}</p>
             </div>
         </div>
         <div class="flex border-b border-40">
             <div class="w-1/4 py-4">
-                <h4 class="font-normal text-80">Autor</h4></div>
+                <h4 class="font-normal text-80">Telefono</h4></div>
             <div class="w-3/4 py-4">
-                <p class="text-90">{{ $publication->AUTHOR }}</p>
+                <p class="text-90">{{ $mentor->phone }}</p>
             </div>
         </div>
-        <div class="flex border-b border-40">
-            <div class="w-1/4 py-4">
-                <h4 class="font-normal text-80">Url</h4></div>
-            <div class="w-3/4 py-4">
-                <a href="{{ $publication->url }}" class="no-underline font-bold dim text-primary">
-                {{ $publication->url }}
-                </a>
-            </div>
-        </div>
-        <div class="flex border-b border-40">
-            <div class="w-1/4 py-4">
-                <h4 class="font-normal text-80">Resumen</h4></div>
-            <div class="w-3/4 py-4">
-                <div>
-                {{ $publication->resume }}</div>
-            </div>
-        </div>
-        <div class="flex border-b border-40">
-            <div class="w-1/4 py-4">
-                <h4 class="font-normal text-80">Año de publicacíon</h4></div>
-            <div class="w-3/4 py-4">
-                <p class="text-90">  
-                {{ $publication->publish_year }}</p>
-            </div>
-        </div>
+
         <div class="flex border-b border-40 remove-bottom-border">
             <div class="w-1/4 py-4">
-                <h4 class="font-normal text-80">Mención</h4></div>
+                <h4 class="font-normal text-80">Cedula</h4></div>
             <div class="w-3/4 py-4">
-                <p class="text-90">{{ $publication->mention }}</p>
+                <p class="text-90">{{ $mentor->cedula }}</p>
             </div>
         </div>
     </div>

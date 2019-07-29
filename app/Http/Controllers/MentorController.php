@@ -14,7 +14,9 @@ class MentorController extends Controller
      */
     public function index()
     {
-        //
+        $mentors = Mentor::all();
+
+        return view('mentors', compact('mentors'));
     }
 
     /**
@@ -44,9 +46,11 @@ class MentorController extends Controller
      * @param  \App\Mentor  $mentor
      * @return \Illuminate\Http\Response
      */
-    public function show(Mentor $mentor)
+    public function show($id)
     {
-        //
+        $mentor = Mentor::findOrFail($id);
+
+        return view('singlementor', compact('mentor'));
     }
 
     /**
