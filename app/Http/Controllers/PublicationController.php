@@ -46,8 +46,10 @@ class PublicationController extends Controller
      * @param  \App\Publication  $publication
      * @return \Illuminate\Http\Response
      */
-    public function show(Publication $publication)
+    public function show($id)
     {
+        $publication = Publication::findOrFail($id);
+
         return view('singlepublication', compact('publication'));
     }
 
