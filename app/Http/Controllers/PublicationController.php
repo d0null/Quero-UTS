@@ -10,11 +10,15 @@ class PublicationController extends Controller
     /**
      * Display a listing of the resource.
      *
+     * @param  Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $publications = Publication::all();
+        $publications = Publication::when($request->input('q'), function($q) use ($request){
+            $q->where('title', 'LIKE', "%{$request->q}%")
+                ->orWhere('resume', 'LIKE', "%{$request->q}%");
+        })->get();
 
         return view('publications', compact('publications'));
     }
