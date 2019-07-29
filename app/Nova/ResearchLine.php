@@ -34,7 +34,12 @@ class ResearchLine extends Resource
     ];
 
     public static function label() {
-        return 'research line Your own label';
+        return 'Lineas de Investigación';
+    }
+
+    public static function singularLabel()
+    {
+        return 'Linea de Investigación';
     }
 
     /**
@@ -47,9 +52,9 @@ class ResearchLine extends Resource
     {
         return [
             ID::make()->sortable(),
-            BelongsTo::make('the parent', 'parent', 'App\Nova\ResearchLine')->nullable(),
-            BelongsTo::make('School', 'school', 'App\Nova\School'),
-            Text::make('Title', 'title'),
+            BelongsTo::make('Padre', 'parent', 'App\Nova\ResearchLine')->nullable(),
+            BelongsTo::make('Escuela', 'school', 'App\Nova\School'),
+            Text::make('Titulo', 'title'),
         ];
     }
 

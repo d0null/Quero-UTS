@@ -33,8 +33,14 @@ class School extends Resource
     ];
 
     public static function label() {
-        return 'school Your own label';
+        return 'Escuelas';
     }
+
+    public static function singularLabel()
+    {
+        return 'Escuela';
+    }
+
 
     /**
      * Get the fields displayed by the resource.
@@ -46,8 +52,8 @@ class School extends Resource
     {
         return [
             ID::make()->sortable(),
-            Text::make('title'),
-            Text::make('code')->nullable()
+            Text::make('Nombre','title'),
+            Text::make('Codigo','code')->nullable()
         ];
     }
 

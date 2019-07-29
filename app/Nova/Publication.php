@@ -37,7 +37,13 @@ class Publication extends Resource
 
     public static function label()
     {
-        return 'publication Your own label';
+        return 'Publicaciones';
+    }
+
+    
+    public static function singularLabel()
+    {
+        return 'Publicacion';
     }
 
     /**
@@ -50,19 +56,37 @@ class Publication extends Resource
     {
         return [
             ID::make()->sortable(),
-            BelongsTo::make('mmmmmmentor', 'mentor', 'App\Nova\Mentor'),
-            BelongsTo::make('the line thing', 'researchLine', 'App\Nova\ResearchLine'),
-            Text::make('Title', 'title'),
-            Text::make('Author', 'author'),
+            BelongsTo::make('Tutor', 'mentor', 'App\Nova\Mentor')->help(
+                'Selecciona el Tutor de la lista de tutores, de no encontrarse debes agregarlo'),
+            BelongsTo::make('Linea de Investigacion', 'researchLine', 'App\Nova\ResearchLine'),
+            Text::make('Titulo', 'title'),
+            Text::make('Autor', 'author'),
             Text::make('Url', 'url'),
-            Textarea::make('Resume', 'resume'),
-            Select::make('something', 'publish_year')->options([
-                2020 => 2020,
-                2021 => 2021,
-            ]),
-            Select::make('menticicockdofsdkfsdfsdfaf', 'mention')->options([
-                'publication' => 'publicationononinonoenenre',
-                'honorific' => 'truly horific',
+            Textarea::make('Resumen', 'resume'),
+            Select::make('Año de publicacíon', 'publish_year')->options([
+                2001 => 2001,
+                2002 => 2002, 
+                2003 => 2003,
+                2004 => 2004, 
+                2005 => 2005,
+                2006 => 2006, 
+                2007 => 2007,
+                2008 => 2008, 
+                2009 => 2009,
+                2010 => 2010, 
+                2011 => 2011,
+                2012 => 2012, 
+                2013 => 2013,
+                2014 => 2014, 
+                2015 => 2015,
+                2016 => 2016,                                                           
+                2017 => 2017, 
+                2018 => 2018,
+                2019 => 2019, 
+                ]),
+            Select::make('Mención', 'mention')->options([
+                'publication' => 'Publicacíon',
+                'honorific' => 'Honorifica',
             ]),
         ];
     }

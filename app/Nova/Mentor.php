@@ -33,9 +33,15 @@ class Mentor extends Resource
     ];
 
     public static function label() {
-        return 'mentor Your own label';
+        return 'Tutores';
     }
 
+    public static function singularLabel()
+    {
+        return 'Tutor';
+    }
+
+    
     /**
      * Get the fields displayed by the resource.
      *
@@ -46,11 +52,11 @@ class Mentor extends Resource
     {
         return [
             ID::make()->sortable(),
-            Text::make('Name', 'name'),
-            Text::make('last_name', 'last_name'),
-            Text::make('cedula', 'cedula'),
-            Text::make('email', 'email'),
-            Text::make('phone', 'phone'),
+            Text::make('Nombre', 'name'),
+            Text::make('Apellido', 'last_name'),
+            Text::make('Cedula', 'cedula'),
+            Text::make('Correo', 'email'),
+            Text::make('Telefono', 'phone'),
         ];
     }
     /**

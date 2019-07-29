@@ -35,7 +35,12 @@ class User extends Resource
     ];
 
     public static function label() {
-        return 'user Your own label';
+        return 'Usuarios';
+    }
+
+    public static function singularLabel()
+    {
+        return 'Usuario';
     }
 
     /**
@@ -51,17 +56,17 @@ class User extends Resource
 
             Gravatar::make(),
 
-            Text::make('Name')
+            Text::make('Nombre','name')
                 ->sortable()
                 ->rules('required', 'max:255'),
 
-            Text::make('Email')
+            Text::make('email')
                 ->sortable()
                 ->rules('required', 'email', 'max:254')
                 ->creationRules('unique:users,email')
                 ->updateRules('unique:users,email,{{resourceId}}'),
 
-            Password::make('Password')
+            Password::make('password')
                 ->onlyOnForms()
                 ->creationRules('required', 'string', 'min:8')
                 ->updateRules('nullable', 'string', 'min:8'),

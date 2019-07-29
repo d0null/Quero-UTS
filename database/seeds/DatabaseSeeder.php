@@ -20,19 +20,19 @@ class DatabaseSeeder extends Seeder
         Role::firstOrCreate(['name' => 'user']);
 
         User::create([
-            'name' => 'perdo',
-            'last_name' => 'maria diana lopez',
-            'cedula' => 'v123',
+            'name' => 'Pedro',
+            'last_name' => 'Perez',
+            'cedula' => 'V18123456',
             'email' => 'wytuxas@gmail.com',
             'password' => Hash::make('barklis1'),
         ])->assignRole('admin');
 
         User::create([
-            'name' => 'albert',
-            'last_name' => 'no show face',
-            'cedula' => 'v321',
-            'email' => 'swdna88@hotmail.com',
-            'password' => Hash::make('diana22diana'),
+            'name' => 'Albert',
+            'last_name' => 'Smith',
+            'cedula' => 'V18123456',
+            'email' => 'test@test.com',
+            'password' => Hash::make('testtest'),
         ])->assignRole('admin');
 
 

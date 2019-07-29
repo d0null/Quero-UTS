@@ -18,8 +18,30 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+    .card {
+        background-color: #FFFFFF;
+        -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,.05);
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,.05);
+        border-radius: .5rem;
+    }
+    .bg-body{
+        background-color: #EEF1F4;
+    }
+    .text-90 {
+        color: #3c4b5f;
+    }
+    .text-80 {
+        color: #7c858e;
+    }
+    .text-black {
+        color: #22292f;
+    }
+
+    </style>
 </head>
-<body>
+<body class="bg-body h-full font-sans antialiased ">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">

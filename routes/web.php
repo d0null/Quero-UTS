@@ -18,3 +18,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/publicaciones', 'PublicationController@index')->name('publications.index');
+
+Route::get('/publicaciones/{id}', 'PublicationController@show')->name('publications.show');
+

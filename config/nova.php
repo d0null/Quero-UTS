@@ -18,7 +18,7 @@ return [
     |
     */
 
-    'name' => 'Nova Site',
+    'name' => 'Repositorio',
 
     /*
     |--------------------------------------------------------------------------
@@ -44,7 +44,7 @@ return [
     |
     */
 
-    'path' => '/nova',
+    'path' => '/admin',
 
     /*
     |--------------------------------------------------------------------------
@@ -76,7 +76,6 @@ return [
         DispatchServingNovaEvent::class,
         BootTools::class,
         Authorize::class,
-        \Vyuldashev\NovaPermission\ForgetCachedPermissions::class,
     ],
 
     /*
