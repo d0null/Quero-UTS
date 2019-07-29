@@ -29,5 +29,5 @@ Route::get('/tutores', 'MentorController@index')->name('mentors.index');
 Route::get('/tutor/{id}', 'MentorController@show')->name('mentors.show');
 
 Route::get('test/{researchLine}', function(\App\ResearchLine $researchLine){
-    return $researchLine->load('descendants');
+    return view('debug', ['data' => $researchLine->load('descendants')]);
 });
