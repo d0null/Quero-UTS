@@ -23,14 +23,11 @@ Route::get('/publicaciones', 'PublicationController@index')->name('publications.
 
 Route::get('/publicacion/{id}', 'PublicationController@show')->name('publications.show');
 
+Route::get('/etiquetas/{tag}', 'PublicationController@tags')->name('tag');
 
 Route::get('/tutores', 'MentorController@index')->name('mentors.index');
 
 Route::get('/tutor/{id}', 'MentorController@show')->name('mentors.show');
-
-Route::get('/etiquetas/{tag}', function($tag){
-    return \App\Publication::withAllTags([$tag])->get();
-})->name('tag');
 
 Route::get('test/{researchLine}', function(\App\ResearchLine $researchLine){
     $mentor = \App\Mentor::first();

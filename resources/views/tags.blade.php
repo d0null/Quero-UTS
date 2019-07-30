@@ -4,17 +4,10 @@
 
    <div class="container mx-auto">
 
-         @if (!request()->q)
          <div class="border-b border-grey mb-2">
-            <h1 class="text-xl text-gray-700 text-sm font-bold my-2">Publicaciones</h1>
+            <h1 class="text-xl text-gray-700 text-sm font-bold my-2">Búsqueda por palabra clave</h1>
          </div>
-         <p class="mb-4">Actualmente, el sistema posee un total de {{ count($publications) }} publicaciones, mostradas a continuación</p>
-         @else
-         <div class="border-b border-grey mb-2">
-            <h1 class="text-xl text-gray-700 text-sm font-bold my-2">Resultados de tu búsqueda para {{ request()->q }} </h1>
-         </div>
-         <p class="mb-4">Actualmente, el sistema posee un total de {{ count($publications) }} publicaciones para tu búsqueda </p>
-         @endif
+         <p class="mb-4">Se encontraron {{ count($publications) }} publicaciones con la pababra clave:  {{ request()->tag }}</p>
          
         <div class="flex">
             @if (count($publications) > 0)

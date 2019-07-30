@@ -23,6 +23,13 @@ class PublicationController extends Controller
         return view('publications', compact('publications'));
     }
 
+    public function tags($tag)
+    {
+        $publications = Publication::withAllTags([$tag])->get();
+
+        return view('tags', compact('publications'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
