@@ -60,6 +60,14 @@ class User extends Resource
                 ->sortable()
                 ->rules('required', 'max:255'),
 
+            Text::make('Apellido','last_name')
+                ->sortable()
+                ->rules('required', 'max:255'),
+            
+            Text::make('Cedula','cedula')
+                ->sortable()
+                ->rules('required', 'max:10'),
+
             Text::make('email')
                 ->sortable()
                 ->rules('required', 'email', 'max:254')

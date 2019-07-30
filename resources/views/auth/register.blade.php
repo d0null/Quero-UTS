@@ -23,7 +23,32 @@
                                 @enderror
                             </div>
                         </div>
+                        <div class="form-group row">
+                            <label for="last_name" class="col-md-4 col-form-label text-md-right text-gray-700 text-sm font-bold ">Apellido</label>
 
+                            <div class="col-md-6">
+                                <input id="last_name" type="text" class="form-control @error('last_name') is-invalid @enderror shadow-sm appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="last_name" value="{{ old('last_name') }}" required autocomplete="last_name" autofocus>
+
+                                @error('last_name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="cedula" class="col-md-4 col-form-label text-md-right text-gray-700 text-sm font-bold ">Cedula</label>
+
+                            <div class="col-md-6">
+                                <input id="cedula" type="text" class="form-control @error('cedula') is-invalid @enderror shadow-sm appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="cedula" value="{{ old('cedula') }}" required autocomplete="cedula" autofocus>
+
+                                @error('cedula')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>                       
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right text-gray-700 text-sm font-bold ">Correo Electrónico</label>
 
