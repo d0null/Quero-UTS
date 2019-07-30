@@ -82,7 +82,7 @@
             <div class="content">
                 <div class="h-64 w-full flex items-center justify-center bg-red-200">
                     <div>
-                        <h1 class="text-2xl" >Hola {{ request()->q }}</h1>
+                        <h1 class="text-2xl" >Hola 2 {{ request()->q }}</h1>
                         <form method="GET" action="{{ route('publications.index') }}">
                             <input id="q" name="q" class="bg-white focus:outline-0 focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal" type="text" placeholder="jane@example.com">
                         </form>
