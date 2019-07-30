@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Mentor;
+use App\Publication;
+use App\School;
 
 class HomeController extends Controller
 {

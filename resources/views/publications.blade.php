@@ -11,7 +11,7 @@
          <p class="mb-4">Actualmente, el sistema posee un total de {{ count($publications) }} publicaciones, mostradas a continuación</p>
          @else
          <div class="border-b border-grey mb-2">
-            <h1 class="text-xl text-gray-700 text-sm font-bold my-2">Resultados de tu búsqueda para {{ request()->q }} </h1>
+            <h1 class="text-xl text-gray-700 text-sm font-bold my-2">Resultados de tu búsqueda para "{{ request()->q }}" </h1>
          </div>
          <p class="mb-4">Actualmente, el sistema posee un total de {{ count($publications) }} publicaciones para tu búsqueda </p>
          @endif

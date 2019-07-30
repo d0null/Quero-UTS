@@ -1,23 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
+<div class="container mx-auto">
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
-                </div>
-            </div>
-        </div>
+    <div class="border-b border-grey mb-2">
+    <h1 class="text-xl text-gray-700 text-sm font-bold my-2">¡Bienvenido de nuevo {{ Auth::user()->name }}!</h1>
     </div>
-</div>
+    <p class="mb-4">Se encontraron  publicaciones con la pababra clave: </p>
+
+    
+    </div>
+</div>>
 @endsection

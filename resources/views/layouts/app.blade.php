@@ -71,7 +71,7 @@
                     <!-- Right Side Of Navbar -->
 
                     <form method="GET" action="{{ route('publications.index') }}" class="form-inline w-full mx-10 text-center">
-                            <input id="q" name="q" class="w-1/2 bg-white text-green-900 text-left outline-none focus:shadow-outline border border-teal-100 rounded-full py-1 px-4 block appearance-none leading-normal" type="search" placeholder="Buscar una publicación" aria-label="Buscar una publicación">
+                            <input id="q" name="q" class="w-1/2 bg-white text-green-900 text-left outline-none focus:shadow-outline border border-teal-100 rounded-full py-1 px-4 block appearance-none leading-normal" type="search" placeholder="Buscar una publicación" aria-label="Buscar una publicación" value="{{ request()->q }}">
                     </form>
 
                     <ul class="navbar-nav ml-auto">
