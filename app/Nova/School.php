@@ -5,6 +5,7 @@ namespace App\Nova;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class School extends Resource
@@ -53,7 +54,8 @@ class School extends Resource
         return [
             ID::make()->sortable(),
             Text::make('Nombre','title'),
-            Text::make('Codigo','code')->nullable()
+            Number::make('Codigo','code')
+            ->rules('required', 'digits_between:1,2'),
         ];
     }
 

@@ -46,8 +46,8 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-dark bg-gray-800 shadow-sm text-gray-100">
             <div class="container">
-                <a class="text-gray-100 text-semibold no-underline hover:no-underline hover:text-teal-300" href="{{ url('/') }}">
-                    UTS-REPOSITORIO
+                <a class="text-gray-100 text-semibold  no-underline hover:no-underline hover:text-teal-300" href="{{ url('/') }}">
+                    Quero-UTS
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -56,9 +56,6 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mx-10">              
-                        <li class="nav-item active">
-                            <a class="text-gray-200 text-semibold no-underline hover:no-underline hover:text-teal-300 mx-2" href="{{ route('publications.index') }}">Inicio</a>
-                        </li>
                         <li class="nav-item">
                             <a class="text-gray-200 text-semibold no-underline hover:no-underline hover:text-teal-300 mx-2" href="{{ route('publications.index') }}">Publicaciones</a>
                         </li>

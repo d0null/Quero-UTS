@@ -24,7 +24,7 @@ class CreatePublicationsTable extends Migration
 
             $table->string('url');
 
-            $table->enum('mention', ['publication', 'honorific']);
+            $table->enum('mention', ['publication', 'honorific', 'none']);
             $table->timestamps();
         });
     }

@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Repositorio UTS</title>
+        <title>Repositorio Quero UTS</title>
 
         <!-- Fonts -->
 
@@ -19,6 +19,12 @@
                 background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
                 height: 100vh;
                 margin: 0;
+            }
+
+            #logoUts{
+                background-image: url('https://i.imgur.com/2gueO7g.png');
+                background-repeat: no-repeat;
+                background-position: 50% 25%;
             }
 
             .full-height {
@@ -62,7 +68,7 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+        <div class="flex-center position-ref full-height" id="logoUts">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -77,7 +83,7 @@
                 </div>
             @endif
 
-            <div class="content">
+            <div class="content" >
                 <div class="h-64 w-full flex items-center justify-center">
 
                     <div>
@@ -89,11 +95,11 @@
                 </div>
 
                 <div class="links mt-10 text-gray-500">
-                    <a href="#">Términos</a>
+                    <a href="http://www.utsbarquisimeto.edu.ve/">Web</a>
                     <a href="#">Privacidad</a>
                     <a href="#">Ayuda</a>
-                    <a href="#">SAIA</a>
-                    <a href="#">Contáctanos</a>
+                    <a href="http://saia.uts.edu.ve/moodle/login/index.php">SAIA</a>
+                    <a href="http://www.utsbarquisimeto.edu.ve/paginas/contacto.html">Contáctanos</a>
                 </div>
                 <div class="links mt-5">
                     <p class="text-gray-500"> &copy; UTS BARQUISIMETO - 2019</p>

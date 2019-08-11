@@ -58,7 +58,7 @@
         </div>
         <div class="flex border-b border-40">
             <div class="w-1/4 py-4">
-                <h4 class="font-normal text-80">Palabras Clave</h4></div>
+                <h4 class="font-normal text-80">Descriptores</h4></div>
             <div class="w-3/4 py-4">
             @foreach($publication->tags as $tag)
                                 <a href="{{ route('tag', $tag->slug) }}"

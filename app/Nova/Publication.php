@@ -92,10 +92,13 @@ class Publication extends Resource
                 2019 => 2019,
             ]),
             Select::make('Mención', 'mention')->options([
-                'publication' => 'Publicacíon',
+                'publication' => 'Publicación',
                 'honorific' => 'Honorifica',
+                'none' => 'Ninguna',
             ]),
-            Tags::make('Tags'),
+            Tags::make('Descriptores')
+            ->sortable()
+            ,
         ];
     }
 
