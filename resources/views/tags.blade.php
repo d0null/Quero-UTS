@@ -5,7 +5,7 @@
    <div class="container mx-auto">
 
          <div class="border-b border-grey mb-2">
-            <h1 class="text-xl text-gray-700 text-sm font-bold my-2">Búsqueda por palabra clave</h1>
+            <h1 class="text-xl text-gray-700 text-sm font-bold my-2">Búsqueda por descriptor</h1>
          </div>
          <p class="mb-4">Se encontraron {{ count($publications) }} publicaciones con el descriptor:  {{ request()->tag }}</p>
          

@@ -23,7 +23,7 @@ Route::get('/publicaciones', 'PublicationController@index')->name('publications.
 
 Route::get('/publicacion/{id}', 'PublicationController@show')->name('publications.show');
 
-Route::get('/etiquetas/{tag}', 'PublicationController@tags')->name('tag');
+Route::get('/descriptor/{tag}', 'PublicationController@tags')->name('tag');
 
 Route::get('/tutores', 'MentorController@index')->name('mentors.index');
 
