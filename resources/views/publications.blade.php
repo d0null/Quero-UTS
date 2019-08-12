@@ -22,7 +22,9 @@
                     <div class="card w-1/3 rounded overflow-hidden shadow mx-2">
                         <div class="px-6 py-3">
                             <div class="border-b border-grey text-gray-700 font-bold text-xl mb-2 pb-2">#{{ $publication->id }} - <a class="no-underline hover:no-underline hover:text-teal-600" href="publicacion/{{ $publication->id }}">{{ $publication->title }}</a></div>
-                            <p>{{ $publication->resume }}</p>
+                            <p>{{ Str::words($publication->resume, 75, '...') }}
+                             
+                            </p>
                             <p class="mt-2">Autor: {{ $publication->author }}, ({{ $publication->publish_year }})</p>
                             <p class="mt-2">Tutor: {{ $publication->mentor->name }}</p>
                         </div>

@@ -22,7 +22,7 @@
             }
 
             #logoUts{
-                background-image: url('https://i.imgur.com/2gueO7g.png');
+                background-image: url('https://i.imgur.com/iKs3CwV.png');
                 background-repeat: no-repeat;
                 background-position: 50% 25%;
             }

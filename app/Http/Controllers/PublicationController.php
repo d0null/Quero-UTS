@@ -17,9 +17,10 @@ class PublicationController extends Controller
     {
         $publications = Publication::when($request->input('q'), function($q) use ($request){
             $q->where('title', 'LIKE', "%{$request->q}%")
-                ->orWhere('resume', 'LIKE', "%{$request->q}%");
-            $q->where('mention', 'LIKE', "%{$request->q}%")
-                ->orWhere('author', 'LIKE', "%{$request->q}%");
+                ->orWhere('resume', 'LIKE', "%{$request->q}%")
+                ->orWhere('mention', 'LIKE', "%{$request->q}%")
+                ->orWhere('author', 'LIKE', "%{$request->q}%")
+                ->orWhere('publish_year', 'LIKE', "%{$request->q}%");
         })->get();
 
         return view('publications', compact('publications'));

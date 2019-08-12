@@ -39,13 +39,23 @@
     .text-black {
         color: #22292f;
     }
+    .navbar{
+        height: 75px;
+        background: #0F2027;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    }
+
+
+    }
 
     </style>
 </head>
-<body class="bg-body h-full font-sans antialiased ">
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-dark bg-gray-800 shadow-sm text-gray-100">
-            <div class="container">
+<body class="bg-body h-full font-sans antialiased " ">
+    <div id="app" >
+        <nav  class="navbar navbar-expand-md navbar-dark bg-gray-800 shadow-sm text-gray-100">
+            <div class="container" >
                 <a class="text-gray-100 text-semibold  no-underline hover:no-underline hover:text-teal-300" href="{{ url('/') }}">
                     Quero-UTS
                 </a>
