@@ -66,10 +66,16 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-
+                    @if (Route::is('publications.index') || Route::is('publications.show') )
                     <form method="GET" action="{{ route('publications.index') }}" class="form-inline w-full mx-10 text-center">
                             <input id="q" name="q" class="w-1/2 bg-white text-green-900 text-left outline-none focus:shadow-outline border border-teal-100 rounded-full py-1 px-4 block appearance-none leading-normal" type="search" placeholder="Buscar una publicación" aria-label="Buscar una publicación" value="{{ request()->q }}">
                     </form>
+                    @endif
+                    @if (Route::is('mentors.index') || Route::is('mentors.show'))
+                    <form method="GET" action="{{ route('mentors.index') }}" class="form-inline w-full mx-10 text-center">
+                            <input id="q" name="q" class="w-1/2 bg-white text-green-900 text-left outline-none focus:shadow-outline border border-teal-100 rounded-full py-1 px-4 block appearance-none leading-normal" type="search" placeholder="Buscar un Tutor" aria-label="Buscar un Tutor" value="{{ request()->q }}">
+                    </form>
+                    @endif
 
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->

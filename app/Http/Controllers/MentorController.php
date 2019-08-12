@@ -7,16 +7,40 @@ use Illuminate\Http\Request;
 
 class MentorController extends Controller
 {
+
+
+    /*public function tags($tag)
+    {
+        $Mentors = Mentor::withAllTags([$tag])->get();
+
+        return view('tags', compact('Mentors'));
+    }*/
+
+    /**
+*
+*
+*
+*
+*
+    */
+
     /**
      * Display a listing of the resource.
      *
+     * @param  Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $mentors = Mentor::all();
 
+
+        $mentors = Mentor::when($request->input('q'), function($q) use ($request){
+            $q->where('name', 'LIKE', "%{$request->q}%")
+                ->orWhere('email', 'LIKE', "%{$request->q}%");
+        })->get();
         return view('mentors', compact('mentors'));
+
+
     }
 
     /**
