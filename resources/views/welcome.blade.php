@@ -24,7 +24,8 @@
             #logoUts{
                 background-image: url('https://i.imgur.com/iKs3CwV.png');
                 background-repeat: no-repeat;
-                background-position: 50% 25%;
+                background-position: 50% 20%;
+                background-size: 40% auto;
             }
 
             .full-height {
