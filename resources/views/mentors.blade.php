@@ -11,7 +11,7 @@
         @foreach ($mentors as $mentor)
             <div class="card w-1/3 rounded overflow-hidden shadow mx-2">
                 <div class="flex justify-between px-6 py-3">
-                    <div class="text-gray-700 text-left text-90 font-semibold text-xl"><a class="no-underline hover:no-underline hover:text-teal-600" href="tutor/{{ $mentor->id }}">{{ $mentor->name ." ". $mentor->last_name }}</a></div>
+                    <div class="text-gray-700 text-left text-90 font-semibold text-xl"><a class="no-underline hover:no-underline hover:text-teal-600" href="tutor/{{ $mentor->id }}">{{ $mentor->escalafon ." ". $mentor->name ." ". $mentor->last_name }}</a></div>
                     <div class="text-gray-700 text-right text-90 font-normal text-xl">
                         <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">{{ $mentor->publications()->count() }} publicaciones</span>
                     </div>

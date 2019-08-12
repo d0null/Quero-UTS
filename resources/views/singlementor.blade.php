@@ -17,7 +17,7 @@
                 <h4 class="font-normal text-80">Nombres</h4></div>
             <div class="w-3/4 py-4">
 
-                 <p class="text-90">   {{ $mentor->name ." ". $mentor->last_name }}</p>
+                 <p class="text-90">   {{  $mentor->escalafon ." ".  $mentor->name ." ". $mentor->last_name }}</p>
 
             </div>
         </div>

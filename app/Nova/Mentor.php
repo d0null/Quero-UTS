@@ -6,6 +6,7 @@ use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Laravel\Nova\Fields\Select;
 
 class Mentor extends Resource
 {
@@ -29,7 +30,7 @@ class Mentor extends Resource
      * @var array
      */
     public static $search = [
-        'name', 'last_name', 'email', 'phone', 'cedula'
+        'name', 'last_name','escalafon', 'email', 'phone', 'cedula'
     ];
 
     public static function label() {
@@ -54,6 +55,12 @@ class Mentor extends Resource
             ID::make()->sortable(),
             Text::make('Nombre', 'name'),
             Text::make('Apellido', 'last_name'),
+            Select::make('Escalafón', 'escalafon')->options([
+                'Lic.' => 'Lic.',
+                'Ing.' => 'Ing.',
+                'Doc.' => 'Doc.',
+                'Prof.' => 'Prof.',
+            ]),           
             Text::make('Cedula', 'cedula'),
             Text::make('Correo', 'email'),
             Text::make('Telefono', 'phone'),

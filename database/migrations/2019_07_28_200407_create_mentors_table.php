@@ -20,6 +20,7 @@ class CreateMentorsTable extends Migration
             $table->string('cedula')->nullable();
             $table->string('email')->nullable();
             $table->string('phone')->nullable();
+            $table->string('escalafon')->nullable();           
             $table->timestamps();
         });
     }

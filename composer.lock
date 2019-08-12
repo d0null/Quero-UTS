@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "00dc52ee6379f3d6c34963298503f9fc",
+    "content-hash": "3b8dc8600eb49a0add41b250e2822968",
     "packages": [
         {
             "name": "benjacho/belongs-to-many-field",
@@ -105,6 +105,47 @@
                 "time"
             ],
             "time": "2019-06-17T15:19:18+00:00"
+        },
+        {
+            "name": "dillingham/nova-ajax-select",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dillingham/nova-ajax-select.git",
+                "reference": "2a150926b8342db5ad8ba71bca6974e7aae1738f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dillingham/nova-ajax-select/zipball/2a150926b8342db5ad8ba71bca6974e7aae1738f",
+                "reference": "2a150926b8342db5ad8ba71bca6974e7aae1738f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "NovaAjaxSelect\\FieldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "NovaAjaxSelect\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Nova Ajax Select",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "time": "2019-05-10T16:43:05+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -950,7 +991,8 @@
             "dist": {
                 "type": "path",
                 "url": "./nova",
-                "reference": "b3dba5c742507977c346ecf74e2924fc918b7c07"
+                "reference": "b3dba5c742507977c346ecf74e2924fc918b7c07",
+                "shasum": null
             },
             "require": {
                 "cakephp/chronos": "^1.0",
@@ -1153,6 +1195,47 @@
                 "storage"
             ],
             "time": "2019-06-18T20:09:29+00:00"
+        },
+        {
+            "name": "manmohanjit/nova-belongs-to-dependency",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/manmohanjit/nova-belongs-to-dependency.git",
+                "reference": "a9a4c73d3fe14a1ee1f0530fce711cf297c61c34"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/manmohanjit/nova-belongs-to-dependency/zipball/a9a4c73d3fe14a1ee1f0530fce711cf297c61c34",
+                "reference": "a9a4c73d3fe14a1ee1f0530fce711cf297c61c34",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Manmohanjit\\BelongsToDependency\\FieldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Manmohanjit\\BelongsToDependency\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Extended Laravel Nova BelongsTo field that can depend on other fields",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "time": "2019-01-19T13:25:09+00:00"
         },
         {
             "name": "monolog/monolog",

@@ -12,6 +12,7 @@ use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Spatie\TagsField\Tags;
+use Manmohanjit\BelongsToDependency\BelongsToDependency;
 
 class Publication extends Resource
 {
@@ -66,6 +67,15 @@ class Publication extends Resource
                 ->optionsLabel('title')
                 ->rules('required', 'size:4'),
             BelongsToMany::make('Linea de Investigacion', 'researchLines', 'App\Nova\ResearchLine'),
+
+            /*
+            BelongsTo::make('School'),
+            BelongsToDependency::make('researchLines')
+            ->dependsOn('school', 'school_id'),
+            BelongsToDependency::make('researchLines')
+            ->dependsOn('school', 'school_id'),  
+            */   
+
             Text::make('Titulo', 'title'),
             Text::make('Autor', 'author'),
             Text::make('Url', 'url'),

@@ -43,7 +43,15 @@
             <div class="w-1/4 py-4">
                 <h4 class="font-normal text-80">Mención</h4></div>
             <div class="w-3/4 py-4">
-                <p class="text-90">{{ $publication->mention }}</p>
+                <p class="text-90">
+                @if ($publication->mention == "publication")
+                    Publicación
+                @elseif ($publication->mention == "honorific")
+                    Honorifica
+                @else
+                    Ninguna
+                @endif                              
+                </p>
             </div>
         </div>
         <div class="flex border-b border-40">
