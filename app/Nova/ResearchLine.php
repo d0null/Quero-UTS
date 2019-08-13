@@ -8,6 +8,7 @@ use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Laravel\Nova\Fields\Select;
 
 class ResearchLine extends Resource
 {
@@ -53,9 +54,17 @@ class ResearchLine extends Resource
     {
         return [
             ID::make()->sortable(),
+            /*
             BelongsTo::make('Padre', 'parent', 'App\Nova\ResearchLine')->nullable(),
             HasMany::make('child pedo', 'children', 'App\Nova\ResearchLine'),
+            */           
             BelongsTo::make('Escuela', 'school', 'App\Nova\School'),
+            Select::make('Línea','parent')->options([
+                'Línea Matriz' => 'Línea Matriz',
+                'Linea Potencial' => 'Linea Potencial',
+                'Línea Virtual' => 'Línea Virtual',
+                'Línea Operativa' => 'Línea Operativa',
+            ]),
             Text::make('Titulo', 'title'),
         ];
     }

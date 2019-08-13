@@ -27,6 +27,7 @@
                             </p>
                             <p class="mt-2">Autor: {{ $publication->author }}, ({{ $publication->publish_year }})</p>
                             <p class="mt-2">Tutor: {{ $publication->mentor->escalafon ." ". $publication->mentor->name }}</p>
+                            <p class="mt-2">Escuela: {{ $publication->school->title}}</p>
                         </div>
                         <div class="px-6 pb-3">  
                             @foreach($publication->tags as $tag)

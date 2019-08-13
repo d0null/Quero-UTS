@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ResearchLine extends Model
 {
+    /*
     public function parent()
     {
         return $this->belongsTo(ResearchLine::class, 'parent_id');
@@ -20,6 +21,7 @@ class ResearchLine extends Model
     {
         return $this->hasMany(ResearchLine::class, 'parent_id')->with('descendants');
     }
+    */
 
     public function school()
     {

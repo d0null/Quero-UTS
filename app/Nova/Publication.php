@@ -62,6 +62,8 @@ class Publication extends Resource
             ID::make()->sortable(),
             BelongsTo::make('Tutor', 'mentor', 'App\Nova\Mentor')->help(
                 'Selecciona el Tutor de la lista de tutores, de no encontrarse debes agregarlo'),
+            BelongsTo::make('Escuela', 'school', 'App\Nova\School')->help(
+                    'Selecciona la escuela de la lista de escuelas, de no encontrarse debes agregarla'),               
             BelongsToManyField::make('Linea de Investigacion', 'researchLines', 'App\Nova\ResearchLine')
                 ->options(\App\ResearchLine::get())
                 ->optionsLabel('title')
@@ -78,7 +80,7 @@ class Publication extends Resource
 
             Text::make('Titulo', 'title'),
             Text::make('Autor', 'author'),
-            Text::make('Url', 'url'),
+            Text::make('Url', 'url')->hideFromIndex(),
             Textarea::make('Resumen', 'resume'),
             Select::make('Año de publicacíon', 'publish_year')->options([
                 2001 => 2001,
@@ -105,7 +107,7 @@ class Publication extends Resource
                 'publication' => 'Publicación',
                 'honorific' => 'Honorifica',
                 'none' => 'Ninguna',
-            ]),
+            ])->hideFromIndex(),
             Tags::make('Descriptores')
             ->sortable()
             ,
