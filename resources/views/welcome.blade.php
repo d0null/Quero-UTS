@@ -98,7 +98,7 @@
                 <div class="links mt-10 text-gray-500">
                     <a href="http://www.utsbarquisimeto.edu.ve/">Web</a>
                     <a href="#">Privacidad</a>
-                    <a href="#">Ayuda</a>
+                    <a href="ayuda">Ayuda</a>
                     <a href="http://saia.uts.edu.ve/moodle/login/index.php">SAIA</a>
                     <a href="http://www.utsbarquisimeto.edu.ve/paginas/contacto.html">Contáctanos</a>
                 </div>

@@ -19,6 +19,8 @@ Auth::routes();
 
 Route::get('/inicio', 'HomeController@index')->name('home');
 
+Route::get('/ayuda', 'HomeController@help')->name('help');
+
 Route::get('/publicaciones', 'PublicationController@index')->name('publications.index');
 
 Route::get('/publicacion/{id}', 'PublicationController@show')->name('publications.show');

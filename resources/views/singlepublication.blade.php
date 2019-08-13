@@ -35,7 +35,7 @@
                 <h4 class="font-normal text-80">Tutor</h4></div>
             <div class="w-3/4 py-4">
                 <a href="/tutor/{{ $publication->mentor->id }}" class="no-underline font-bold dim text-primary">
-                    {{ $publication->mentor->name ." ". $publication->mentor->last_name }}
+                    {{  $publication->mentor->escalafon ." ". $publication->mentor->name ." ". $publication->mentor->last_name }}
                 </a>
             </div>
         </div>
