@@ -64,7 +64,7 @@ class Publication extends Resource
             BelongsTo::make('Tutor', 'mentor', 'App\Nova\Mentor')->help(
                 'Selecciona el Tutor de la lista de tutores, de no encontrarse debes agregarlo'),
             BelongsTo::make('Escuela', 'school', 'App\Nova\School')->help(
-                    'Selecciona la escuela de la lista de escuelas, de no encontrarse debes agregarla'), 
+                    'Selecciona la escuela de la lista de escuelas, de no encontrarse debes agregarla')->sortable(), 
 
                                  
             BelongsToManyField::make('Linea de Investigacion', 'researchLines', 'App\Nova\ResearchLine')
@@ -81,8 +81,8 @@ class Publication extends Resource
             ->dependsOn('school', 'school_id'),  
             */   
 
-            Text::make('Titulo', 'title'),
-            Text::make('Autor', 'author'),
+            Text::make('Titulo', 'title')->sortable(),
+            Text::make('Autor', 'author')->sortable(),
             Text::make('Url', 'url')->hideFromIndex(),
             Textarea::make('Resumen', 'resume'),
             Select::make('Año de publicacíon', 'publish_year')->options([
@@ -105,15 +105,13 @@ class Publication extends Resource
                 2017 => 2017,
                 2018 => 2018,
                 2019 => 2019,
-            ]),
+            ])->sortable(),
             Select::make('Mención', 'mention')->options([
                 'publication' => 'Publicación',
                 'honorific' => 'Honorifica',
                 'none' => 'Ninguna',
             ])->hideFromIndex(),
             Tags::make('Descriptores')
-            ->sortable()
-            ,
         ];
     }
 

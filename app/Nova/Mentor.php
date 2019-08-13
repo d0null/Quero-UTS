@@ -53,15 +53,15 @@ class Mentor extends Resource
     {
         return [
             ID::make()->sortable(),
-            Text::make('Nombre', 'name'),
-            Text::make('Apellido', 'last_name'),
+            Text::make('Nombre', 'name')->sortable(),
+            Text::make('Apellido', 'last_name')->sortable(),
             Select::make('Escalafón', 'escalafon')->options([
                 'Lic.' => 'Lic.',
                 'Ing.' => 'Ing.',
                 'Doc.' => 'Doc.',
                 'Prof.' => 'Prof.',
             ]),           
-            Text::make('Cedula', 'cedula'),
+            Text::make('Cedula', 'cedula')->sortable(),
             Text::make('Correo', 'email'),
             Text::make('Telefono', 'phone'),
         ];

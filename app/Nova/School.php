@@ -55,7 +55,8 @@ class School extends Resource
             ID::make()->sortable(),
             Text::make('Nombre','title'),
             Number::make('Codigo','code')
-            ->rules('required', 'digits_between:1,2'),
+            ->rules('required', 'digits_between:1,2')
+            ->sortable(),
         ];
     }
 
