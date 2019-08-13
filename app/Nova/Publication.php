@@ -81,7 +81,8 @@ class Publication extends Resource
             ->dependsOn('school', 'school_id'),  
             */   
 
-            Text::make('Titulo', 'title')->sortable(),
+            //Text::make('Titulo', 'title')->sortable(),
+            Textarea::make('Titulo', 'title')->showOnIndex()->limit(30),
             Text::make('Autor', 'author')->sortable(),
             Text::make('Url', 'url')->hideFromIndex(),
             Textarea::make('Resumen', 'resume'),
