@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3b8dc8600eb49a0add41b250e2822968",
+    "content-hash": "3fad8f7b3be888d9a4dafbc98ec283ce",
     "packages": [
         {
             "name": "benjacho/belongs-to-many-field",
@@ -1111,6 +1111,47 @@
                 "psysh"
             ],
             "time": "2018-10-12T19:39:35+00:00"
+        },
+        {
+            "name": "laravelrotebal/nova-attach-many",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravelrotebal/nova-attach-many.git",
+                "reference": "3afa92e656a9186a2a802b0b24de4cc21cab0818"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravelrotebal/nova-attach-many/zipball/3afa92e656a9186a2a802b0b24de4cc21cab0818",
+                "reference": "3afa92e656a9186a2a802b0b24de4cc21cab0818",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "NovaAttachMany\\Providers\\FieldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "NovaAttachMany\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Attach Many Nova field",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "time": "2019-08-07T14:43:45+00:00"
         },
         {
             "name": "league/flysystem",

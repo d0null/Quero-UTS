@@ -14,6 +14,7 @@ use Laravel\Nova\Http\Requests\NovaRequest;
 use Spatie\TagsField\Tags;
 use Manmohanjit\BelongsToDependency\BelongsToDependency;
 
+
 class Publication extends Resource
 {
     /**
@@ -63,7 +64,9 @@ class Publication extends Resource
             BelongsTo::make('Tutor', 'mentor', 'App\Nova\Mentor')->help(
                 'Selecciona el Tutor de la lista de tutores, de no encontrarse debes agregarlo'),
             BelongsTo::make('Escuela', 'school', 'App\Nova\School')->help(
-                    'Selecciona la escuela de la lista de escuelas, de no encontrarse debes agregarla'),               
+                    'Selecciona la escuela de la lista de escuelas, de no encontrarse debes agregarla'), 
+
+                                 
             BelongsToManyField::make('Linea de Investigacion', 'researchLines', 'App\Nova\ResearchLine')
                 ->options(\App\ResearchLine::get())
                 ->optionsLabel('title')

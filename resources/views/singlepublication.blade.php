@@ -66,7 +66,7 @@
                 <h4 class="font-normal text-80">Lineas de Investigacion</h4></div>
             <div class="w-3/4 py-4">
             @foreach($publication->researchLines as $researchLine)
-                                   <p>{{ $researchLine->title }}</p>
+                                   <p> {{ $researchLine->parent }} {{ $researchLine->title }}</p>
                                 
             @endforeach
             </div>
