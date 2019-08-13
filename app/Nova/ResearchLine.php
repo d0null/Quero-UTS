@@ -64,8 +64,8 @@ class ResearchLine extends Resource
                 'Linea Potencial' => 'Linea Potencial',
                 'Línea Virtual' => 'Línea Virtual',
                 'Línea Operativa' => 'Línea Operativa',
-            ]),
-            Text::make('Titulo', 'title'),
+            ])->sortable(),
+            Text::make('Titulo', 'title')->sortable(),
         ];
     }
 
